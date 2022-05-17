@@ -1,0 +1,89 @@
+.description {
+  background: url("../img/bg-main.png");
+  background-size: cover;
+  // background-position: center;
+  background-repeat: no-repeat;
+  padding-top: 100px;
+  padding-bottom: 220px;
+  .description__title {
+    max-width: 780px;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 3rem;
+    line-height: 58px;
+    text-transform: uppercase;
+    color: $color-main;
+    margin-bottom: 80px;
+  }
+  span {
+    color: #000;
+  }
+  .description__content {
+    &-text {
+      font-style: normal;
+      font-weight: 700;
+      font-size: 1.2rem;
+      line-height: 24px;
+      // display: flex;
+      // align-items: center;
+      color: #000000;
+      margin-bottom: 10px;
+    }
+    &-list {
+      margin-bottom: 80px;
+      li {
+        position: relative;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 1.2rem;
+        line-height: 24px;
+        display: flex;
+        align-items: center;
+        color: #000000;
+        &::before {
+          content:  "—";
+          left: -15px;
+        }
+      }
+    }
+  }
+  .description__buttnos {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    .button {
+      width: 183px;
+      padding-top: 10px;
+      padding-bottom: 10px;
+      transition: all ease-in-out .2s;
+    }
+    .button__order {
+      background-color: $color-main;
+      color: #fff;
+      border: 1px solid #FFFFFF;
+      border-radius: 4px;
+      &:hover {
+        background-color: #fff;
+        border: 1px solid $color-main;
+        color: $color-main;
+        -webkit-box-shadow: 8px 8px 7px 0px rgba(0, 0, 0, 0.2);
+        -moz-box-shadow: 8px 8px 7px 0px rgba(0, 0, 0, 0.2);
+        box-shadow: 8px 8px 7px 0px rgba(0, 0, 0, 0.2);
+      }
+    }
+    .button__more {
+      color: #000;
+      background: #FFFFFF;
+      border: 1px solid #6F6D7B;
+      border-radius: 4px;
+      &:hover {
+        background-color: $mainColor;
+        color: #fff;
+        -webkit-box-shadow: 8px 8px 7px 0px rgba(0, 0, 0, 0.2);
+        -moz-box-shadow: 8px 8px 7px 0px rgba(0, 0, 0, 0.2);
+        box-shadow: 8px 8px 7px 0px rgba(0, 0, 0, 0.2);
+      }
+    }
+  }
+}
