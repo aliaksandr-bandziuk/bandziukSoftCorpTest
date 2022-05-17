@@ -128,6 +128,28 @@
           border-radius: 50%;
           margin-bottom: 20px;
           position: relative;
+          transition: all ease-in-out .2s;
+
+          &:hover {
+            -webkit-animation: bullet__pic 2s ease 0s 1 normal forwards;
+            animation: bullet__pic 2s ease 0s 1 normal forwards;
+
+            @keyframes bullet__pic {
+              0% {
+                opacity: 1;
+              }
+            
+              50% {
+                opacity: 0.2;
+              }
+            
+              100% {
+                opacity: 1;
+              }
+            }
+          }
+
+
           &-img {
             position: absolute;
             top: 50%;
