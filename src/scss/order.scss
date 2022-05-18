@@ -21,7 +21,7 @@
       color: #FFFFFF;
       margin-bottom: 30px;
     }
-    span {
+    .title__hightlight {
       @include span-highlight;
     }
     .order__description {
@@ -172,12 +172,26 @@
     }
     .sending {
       width: 100%;
-      .form {
+      .form__submit {
         input {
           width: 100%;
+          background-color: rgba(255, 255, 255, 0.85);
+          border: 1px solid #FFFFFF;
+          border-radius: 3px;
+          padding: 12px 10px;
+            &::placeholder {
+              color: #272733;
+              font-style: normal;
+              font-weight: 400;
+              font-size: 1.1rem;
+              line-height: 22px;
+          }
         }
         select {
           width: 100%;
+        }
+        .simplebar-scrollbar::before {
+          background-color: $color-main;
         }
         .form__grid {
           display: grid;
@@ -191,13 +205,49 @@
             grid-area: select; 
           }
           .form__email { 
-            grid-area: email; 
+            grid-area: email;
           }
           .form__name { 
             grid-area: name; 
           }
-          .form__range { 
-            grid-area: range; 
+          .form__range {
+            grid-area: range;
+            .range__wrapper {
+              display: flex;
+              flex-direction: column;
+              .range__content {
+                color: #fff;
+                display: flex;
+                justify-content: space-between;
+                margin-bottom: 10px;
+              }
+              .noUi-connect {
+                background-color: rgba(255, 255, 255, 0.7);
+              }
+              .noUi-handle {
+                border-radius: 50%;
+                background: #42A9ED;
+                border: 3px solid #286690;
+                width: 24px;
+                height: 24px;
+                top: -10px;
+              }
+              .noUi-handle:before,
+              .noUi-handle:after {
+                content: "";
+                display: block;
+                position: absolute;
+                height: 0px;
+                width: 1px;
+                background: #e8e7e6;
+                left: 14px;
+                top: 6px;
+              }
+              .noUi-horizontal {
+                height: 8px;
+                border: 1px solid #FFFFFF;
+              }
+            }
           }
           .form__file {
             background-color: #fff;

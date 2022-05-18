@@ -1,7 +1,7 @@
 <section class="order">
   <div class="order__container">
     <div class="order__wrapper">
-      <h2 class="order__title">Оформление&nbsp; <span>заказа</span></h2>
+      <h2 class="order__title">Оформление&nbsp; <span class="title__hightlight">заказа</span></h2>
       <p class="order__description">
         Перед заполнением формы ознакомьтесь с нашей схемой работы!
       </p>
@@ -76,34 +76,54 @@
         </div>
       </div>
       <div class="sending">
-        <form class="form" action="#">
+        <form class="form__submit" action="#">
           <div class="form__grid">
             <div class="form__select">
               <label for="">
-                <select name="" id="" value="">
+                <select name="form[]" class="form" data-scroll>
                   <option value="" disabled selected hidden>Выберите тип системы</option>
-                  <option value="">Sed ut perspiciatis</option>
-                  <option value="">Nemo enim ipsam</option>
-                  <option value="">Et harum quidem</option>
-                  <option value="">Temporibus autem</option>
-                  <option value="">Itaque earum rerum</option>
+                  <option value="1">Sed ut perspiciatis</option>
+                  <option value="2">Nemo enim ipsam</option>
+                  <option value="3">Et harum quidem</option>
+                  <option value="4">Temporibus autem</option>
+                  <option value="5">Itaque earum rerum</option>
+                  <option value="1">Sed ut perspiciatis</option>
+                  <option value="2">Nemo enim ipsam</option>
+                  <option value="3">Et harum quidem</option>
+                  <option value="4">Temporibus autem</option>
+                  <option value="5">Itaque earum rerum</option>
+                  <option value="1">Sed ut perspiciatis</option>
+                  <option value="2">Nemo enim ipsam</option>
+                  <option value="3">Et harum quidem</option>
+                  <option value="4">Temporibus autem</option>
+                  <option value="5">Itaque earum rerum</option>
+                  <option value="1">Sed ut perspiciatis</option>
+                  <option value="2">Nemo enim ipsam</option>
+                  <option value="3">Et harum quidem</option>
+                  <option value="4">Temporibus autem</option>
+                  <option value="5">Itaque earum rerum</option>
+                </select>
                 </select>
               </label>
             </div>
             <div class="form__email">
               <label for="email">
-                <input type="text" id="email">
+                <input type="text" id="email" placeholder="Ваш e-mail">
               </label>
             </div>
             <div class="form__name">
               <label for="name">
-                <input type="text" id="name">
+                <input type="text" id="name" placeholder="Ваше имя">
               </label>
             </div>
             <div class="form__range">
-              <label for="range">
-                <input type="range" id="range">
-              </label>
+              <div class="range__wrapper">
+                <div class="range__content">
+                  <p class="range__text">Sed ut perspiciatis, unde omnis iste natus</p>
+                  <p class="range__value">75 %</p>
+                </div>
+                <div class="range__input" id="range"></div>
+              </div>
             </div>
             <div class="form__file">
               <input class="input__file" type="file" id="file">

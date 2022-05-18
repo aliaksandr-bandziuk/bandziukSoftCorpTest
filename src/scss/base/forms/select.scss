@@ -2,32 +2,48 @@
 // Снипет (HTML): sel
 .select {
 	position: relative;
+	
 	// .select__body
 	&__body {
 		position: relative;
 	}
 	// .select__title
 	&__title {
-		color: inherit;
+		color: #272733;
 		text-align: left;
 		border: 1px solid #d9d9d9;
-		background-color: #fff;
+		background-color: rgba(255, 255, 255, 0.85);
 		cursor: pointer;
 		width: 100%;
 		border-radius: 4px;
+		color: #272733;
+		font-style: normal;
+		font-weight: 400;
+		font-size: 1.1rem;
+		line-height: 22px;
+		._select-open & {
+			background-color: rgba(61, 64, 80, 0.85);
+			border: 1px solid #3D4050;
+			color: #fff;
+		}
 	}
 	// .select__value
 	&__value {
+		color: #272733;
 		display: flex;
 		align-items: center;
-		height: rem(30);
+		height: rem(45);
 		padding: 0 rem(15);
+		// padding: 12px 10px;
 		gap: rem(10);
+		._select-open & {
+			color: #fff;
+		}
 		> * {
 			flex: 1 1 auto;
 		}
 		&:after {
-			content: "";
+			content: "\142F";
 			align-self: stretch;
 			flex: 0 0 10px;
 			transition: all 0.3s ease 0s;
@@ -36,6 +52,7 @@
 			align-items: center;
 			._select-open & {
 				transform: rotate(-180deg);
+				color: #fff;
 			}
 		}
 		&._select-pseudo-label {
@@ -56,15 +73,15 @@
 	}
 	// .select__options
 	&__options {
-		color: #000;
+		color: #fff;
 		position: absolute;
-		top: 29px;
-		border-radius: 0 0 4px 4px;
+		top: 45px;
+		border-radius: 0 0 3px 3px;
 		min-width: 100%;
 		left: 0;
-		background-color: #fff;
+		background-color: rgba(39, 39, 51, 0.9);
 		border-top: 0;
-		border: 1px solid #d9d9d9;
+		border: 1px solid #3D4050;
 		border-top: 0;
 		padding: 10px 0px 5px 0px;
 	}
@@ -89,6 +106,9 @@
 		cursor: pointer;
 		padding: 5px 15px;
 		color: inherit;
+		&:hover {
+			color: #42A9ED;
+		}
 		&._select-selected {
 			background-color: #eee;
 		}

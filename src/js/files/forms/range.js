@@ -5,7 +5,7 @@ import * as noUiSlider from 'nouislider';
 // в файле scss/forms/forms.scss
 
 // Подключение cтилей из node_modules
-// import 'nouislider/dist/nouislider.css';
+import 'nouislider/dist/nouislider.css';
 
 export function rangeInit() {
 	const priceSlider = document.querySelector('#range');
@@ -13,11 +13,11 @@ export function rangeInit() {
 		let textFrom = priceSlider.getAttribute('data-from');
 		let textTo = priceSlider.getAttribute('data-to');
 		noUiSlider.create(priceSlider, {
-			start: 0, // [0,200000]
-			connect: [true, false],
+			start: 75, // [0,200000]
+			connect: true, // [true, false],
 			range: {
 				'min': [0],
-				'max': [200000]
+				'max': [100]
 			}
 		});
 		/*
