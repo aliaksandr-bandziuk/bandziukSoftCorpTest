@@ -7,3 +7,19 @@ $bg-footer: #3D4050;
 @mixin span-highlight {
   color: $color-main;
 }
+
+@mixin footer-line {
+  content: "";
+  height: 18px;
+  width: 1px;
+  background-color: #fff;
+  margin-left: 40px;
+  margin-right: 40px;
+  @media (max-width: 1150px) {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+  @media (max-width: 1070px) {
+    display: none;
+  }
+}

@@ -4,6 +4,10 @@
   background-image: url("../img/bg-map.png");
   background-repeat: no-repeat;
   background-color: #272733;
+  @media (max-width: 700px) {
+    padding-top: 70px;
+    padding-bottom: 70px;
+  }
   .order__wrapper {
     display: flex;
     flex-direction: column;
@@ -14,12 +18,11 @@
       font-weight: 700;
       font-size: 2.5rem;
       line-height: 43px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
+      text-align: center;
       text-transform: uppercase;
       color: #FFFFFF;
       margin-bottom: 30px;
+      word-wrap: break-word;
     }
     .title__hightlight {
       @include span-highlight;
@@ -63,7 +66,7 @@
         @media (max-width: 959px) {
           left: 27%;
         }
-        @media (max-width: 959px) {
+        @media (max-width: 719px) {
           left: 40%;
         }
         @media (max-width: 479px) {
@@ -79,7 +82,7 @@
         @media (max-width: 959px) {
           left: 62%;
         }
-        @media (max-width: 959px) {
+        @media (max-width: 719px) {
           top: 45%;
           left: 40%;
         }
@@ -132,22 +135,8 @@
           transition: all ease-in-out .2s;
 
           &:hover {
-            -webkit-animation: bullet__pic 2s ease 0s 1 normal forwards;
-            animation: bullet__pic 2s ease 0s 1 normal forwards;
-
-            @keyframes bullet__pic {
-              0% {
-                opacity: 1;
-              }
-            
-              50% {
-                opacity: 0.2;
-              }
-            
-              100% {
-                opacity: 1;
-              }
-            }
+            transition: all .8s ease-in-out;
+            transform: rotate(360deg);
           }
 
 
@@ -201,6 +190,23 @@
             ". submit .";
             grid-template-columns: 1fr 1fr .9fr;
           grid-gap: 2rem;
+          @media (max-width: 890px) {
+            grid-template-areas: 
+              "select select select"
+              "email email email"
+              "name name name"
+              "range range file"
+              "submit submit submit";
+          }
+          @media (max-width: 890px) {
+            grid-template-areas: 
+              "select select select"
+              "email email email"
+              "name name name"
+              "range range range"
+              "file file file"
+              "submit submit submit";
+          }
         }
           .form__select { 
             grid-area: select; 
@@ -298,12 +304,14 @@
             cursor: pointer;
             transition: all ease-in-out .3s;
             &:hover {
-              font-size: large;
               color: #3E9CDC;
               background-color: #fff;
-              box-shadow: 0 0 1em .25em #6FBFD8,
+              box-shadow: 0 0 1em .05em #6FBFD8,
                      0 0 4em 2em #6FBFD8,
-                     inset 0 0 .75em .25em #6FBFD8;
+                     inset 0 0 .05em .05em #6FBFD8;
+            }
+            @media (max-width: 890px) {
+              margin-top: 0;
             }
           }
         }
