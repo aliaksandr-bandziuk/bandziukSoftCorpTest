@@ -9,6 +9,7 @@ import 'nouislider/dist/nouislider.css';
 
 export function rangeInit() {
 	const priceSlider = document.querySelector('#range');
+	const priceSliderValue = document.getElementById('value');
 	if (priceSlider) {
 		let textFrom = priceSlider.getAttribute('data-from');
 		let textTo = priceSlider.getAttribute('data-to');
@@ -26,6 +27,9 @@ export function rangeInit() {
 		priceStart.addEventListener('change', setPriceValues);
 		priceEnd.addEventListener('change', setPriceValues);
 		*/
+		priceSlider.noUiSlider.on('update', function (values, handle) {
+			priceSliderValue.innerHTML = Math.round(values[handle]);
+		});
 		function setPriceValues() {
 			let priceStartValue;
 			let priceEndValue;

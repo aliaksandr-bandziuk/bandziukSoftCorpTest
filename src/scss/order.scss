@@ -198,7 +198,7 @@
               "range range file"
               "submit submit submit";
           }
-          @media (max-width: 890px) {
+          @media (max-width: 750px) {
             grid-template-areas: 
               "select select select"
               "email email email"
@@ -238,6 +238,7 @@
                 width: 24px;
                 height: 24px;
                 top: -10px;
+                cursor: pointer;
               }
               .noUi-handle:before,
               .noUi-handle:after {
@@ -299,7 +300,8 @@
             border-radius: 4px;
             color: #fff;
             text-transform: uppercase;
-            padding: 18px 120px;
+            padding-top: 18px;
+            padding-bottom: 18px;
             gap: 10px;
             cursor: pointer;
             transition: all ease-in-out .3s;
