@@ -556,13 +556,13 @@ h6 {
   }
 }
 .footer .footer__wrappwer .footer__social-email::before {
-  content: url(/a393169be5d35403bb0a.svg);
+  content: url("../img/footer-4.svg");
   width: 20px;
   height: 20px;
   margin-right: 15px;
 }
 .footer .footer__wrappwer .footer__social-net::before {
-  content: url(/852ef823fd235921c629.svg);
+  content: url("../img/footer-5.svg");
   width: 20px;
   height: 20px;
   margin-right: 15px;
