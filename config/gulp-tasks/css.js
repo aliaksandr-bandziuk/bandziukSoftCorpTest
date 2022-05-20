@@ -33,7 +33,7 @@ export const css = () => {
 					app.isBuild,
 					webpcss(
 						{
-							webpClass: ".webp",
+							webpClass: "",
 							noWebpClass: ".no-webp"
 						}
 					)
